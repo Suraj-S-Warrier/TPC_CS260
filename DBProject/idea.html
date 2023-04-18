@@ -1,0 +1,98 @@
+<!--
+    TODO:
+    Make email verification of student and alumni work
+    Profile and  Logout page for Student, Alumni , and the company
+
+    IF TIME PERMITS, COORDINATOR/ADMIN PRIVILEGES
+
+
+
+    
+
+
+
+Student table:
+Attributes: Roll no
+            1 - .. sem spi
+            Transcript
+            resume
+            CV
+            package
+            active
+
+Common Table:  (A table common between Alumni and Student..so if we need Alumni details..natural join with this table..if Student details needed..same
+                This will decrease redundancy)
+
+                first_name
+                last_name
+                rollno         
+                contact
+                webmail
+                email 
+                password
+                dob
+                cpi
+                marks10
+                marks12
+                spec
+                gender
+                passout_year        
+
+Alumni table:   rollno
+                active
+        
+Past_Companies Table:  (a table to store the companies where the alumni worked previously and is working currently in)  
+                        pcid
+                        rollno
+                        ctc
+                        start_year
+                        end_year
+                        position 
+                        company_name
+                        location
+
+Company table:      cid
+                    company_name
+                    hiring
+                    email
+                    contact
+                    password
+                    approved
+
+Job_Roles Table:    jid
+                    cid
+                    company_name
+                    position
+                    cpi_req
+                    marks_req
+                    branches_req
+                    ctc
+                    min_passout_year
+                    wr_interview
+                    on_off
+
+
+Recruitment_History: will store the placements of previous years
+                    company_name
+                    cid
+                    rollno
+                    recruitment_year
+                    CTC
+                    location
+                    position
+
+Job_Applications table: Every time a student clicks an APPLY NOW, the roll no and jid will be passed into this table
+
+                        jid
+                        rollno
+Admin Table:
+                    email
+                    password
+
+
+
+
+
+
+            
+-->
